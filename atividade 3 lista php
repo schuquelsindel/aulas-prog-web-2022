@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Salário</title>
+</head>
+<body>
+    <form method="POST">
+        altura:<input type="number" name="h" step="0.01"> <br>
+        
+		sexo: (masc ou fem) <input type="text" name="sexo">  <br>
+        <input type="submit" name="enviar" value="Enviar">
+	</form>
+</body>
+</html>
+
+<?php
+if (isset($_POST['enviar'])){
+    $altura = $_POST['h'];
+    $sexo = $_POST['sexo'];
+    if($sexo == 'masc'){
+            
+            $imc = (72.7 * $altura) - 58;
+            
+            //resultado
+            echo("peso ideal: $imc");
+         }
+    if ($sexo == 'fem'){
+    	 $imc = (62.1 * $altura) - 44.77;
+    	 //resultado
+            echo("peso ideal: $imc");
+        }
+}
+?>
