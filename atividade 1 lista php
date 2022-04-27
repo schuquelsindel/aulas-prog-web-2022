@@ -1,0 +1,14 @@
+<?php
+
+$Chico = 0.8;
+$Juca = 0.6;
+$cont = 0;
+
+while ($Chico > $Juca){
+     $Chico = $Chico + 0.06;
+     $Juca = $Juca +0.09;
+     $cont++;
+}
+
+echo($cont);
+?>
